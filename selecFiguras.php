@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Formulario de datos de la figura</h1>
-        <!-- Aquí se genera dinámicamente el formulario -->
+        
         <?php
         session_start();
         if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -53,7 +53,7 @@
         ?>
     </div>
 
-    <!-- Incluir el archivo de script -->
+    
     <script src="validaciones.js"></script>
 </body>
 </html>

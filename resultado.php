@@ -26,26 +26,26 @@
                     $triangulo = new Triangulo($lado1, $lado2, $lado3, $_SESSION["figura"],);
                     echo "<p>Área del triángulo: " . $triangulo->calcularArea() . "</p>";
                     echo "<p>Perímetro del triángulo: " . $triangulo->calcularPerimetre() . "</p>";
-                    unset($triangulo); // Destrucción del objeto
+                    unset($triangulo); // Destruyo ell objeto con "unset" (esto asegura su eliminación)
                 } elseif ($_SESSION["figura"] == "cuadrado") {
                     $lado1 = $_POST["lado1"];
                     $cuadrado = new Cuadrado($lado1, $_SESSION["figura"]);
                     echo "<p>Área del cuadrado: " . $cuadrado->calcularArea() . "</p>";
                     echo "<p>Perímetro del cuadrado: " . $cuadrado->calcularPerimetre() . "</p>";
-                    unset($cuadrado); // Destrucción del objeto
+                    unset($cuadrado); 
                 } elseif ($_SESSION["figura"] == "circulo") {
                     $lado1 = $_POST["lado1"];
                     $circulo = new Circulo($lado1, $_SESSION["figura"]);
                     echo "<p>Área del círculo: " . $circulo->calcularArea() . "</p>";
                     echo "<p>Perímetro del círculo: " . $circulo->calcularPerimetre() . "</p>";
-                    unset($circulo); // Destrucción del objeto
+                    unset($circulo); 
                 } elseif ($_SESSION["figura"] == "rectangulo") {
                     $lado1 = $_POST["lado1"];
                     $lado2 = $_POST["lado2"];
                     $rectangulo = new Rectangulo($lado1,$lado2,$_SESSION["figura"]);
                     echo "<p>Área del rectángulo: " . $rectangulo->calcularArea() . "</p>";
                     echo "<p>Perímetro del rectángulo: " . $rectangulo->calcularPerimetre() . "</p>";
-                    unset($rectangulo); // Destrucción del objeto
+                    unset($rectangulo); 
                 }
             } else {
                 header("location:index.php");

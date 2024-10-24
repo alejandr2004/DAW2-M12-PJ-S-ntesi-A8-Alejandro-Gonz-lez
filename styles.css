@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-/* Contenedor principal */
+
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del formulario */
+
 form {
     display: flex;
     flex-direction: column;
@@ -48,13 +48,13 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* Estilo del título */
+
 h1, h2 {
     color: #333;
     text-align: center;
 }
 
-/* Estilo para los resultados de área y perímetro */
+
 .result {
     background-color: #e2e8f0;
     padding: 20px;
@@ -62,16 +62,16 @@ h1, h2 {
     border-radius: 5px;
     font-size: 18px;
     text-align: center;
-    line-height: 1.6; /* Mejora la legibilidad */
+    line-height: 1.6; 
 }
 
-/* Estilo para el área y perímetro en líneas separadas */
+
 .result p {
     margin: 10px 0;
     color: #333;
 }
 
-/* Estilo para el mensaje de eliminación del objeto */
+
 .deletion-message {
     color: red;
     font-weight: bold;
@@ -79,14 +79,14 @@ h1, h2 {
     text-align: center;
 }
 
-/* Estilo para mensajes de error en la validación */
+
 .error-message {
     color: red;
     font-size: 0.9em;
     margin-top: 5px;
 }
 
-/* Estilo general de los inputs */
+
 input {
     display: block;
     margin-bottom: 10px;

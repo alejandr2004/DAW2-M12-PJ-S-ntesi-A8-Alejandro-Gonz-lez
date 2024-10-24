@@ -2,21 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevenir el envío del formulario
+        event.preventDefault(); // Previene el envío del formulario por defecto
 
-        // Limpiar mensajes de error previos
+        // Limpia los mensajes de error anteriores
         const errorMessages = document.querySelectorAll('.error-message');
         errorMessages.forEach(message => message.remove());
 
-        // Validar todos los campos
+        
         let valid = true;
 
-        // Seleccionar los campos del formulario dinámico
+        
         const lado1 = document.getElementById('lado1');
         const lado2 = document.getElementById('lado2');
         const lado3 = document.getElementById('lado3');
 
-        // Validación de números positivos en los campos existentes
+        
         if (lado1 && lado1.value <= 0) {
             valid = false;
             showError(lado1, "El valor debe ser un número positivo.");
@@ -32,17 +32,17 @@ document.addEventListener('DOMContentLoaded', function () {
             showError(lado3, "El valor debe ser un número positivo.");
         }
 
-        // Si el formulario es válido, mostrar un Sweet Alert de éxito
-        if (valid) {
+        
+        if (valid) { //si valid sigue siendo true significa que no hay errores, por tanto se mostrará el mensaje
             Swal.fire({
                 icon: 'success',
                 title: 'Formulario válido',
                 text: '¡Los datos han sido ingresados correctamente!',
             }).then(() => {
-                form.submit();  // Enviar el formulario
+                form.submit(); 
             });
         } else {
-            // Mostrar alerta de error con Sweet Alert si hay errores
+            //mensaje de error si falla algo
             Swal.fire({
                 icon: 'error',
                 title: 'Error de validación',
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Función para mostrar mensajes de error en los campos
+// función que enseña mensajes de error en los campos del formulario.Crea un nuevo elemento div con el mensaje de error y lo añade al final del input.
 function showError(input, message) {
     const errorElement = document.createElement('div');
     errorElement.classList.add('error-message');
